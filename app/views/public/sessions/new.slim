@@ -1,0 +1,19 @@
+.row
+  .col-md-3
+
+  .col-md-6.well.sign-in
+    h3
+      | Sign in
+    = form_tag sessions_path do
+      .row
+        .col-md-10.form-group
+          = label_tag :email
+          = email_field_tag :email, params[:email], {autofocus: true, class: 'form-control'}
+      
+      .row
+        .col-md-10.form-group
+          = label_tag :password
+          = password_field_tag :password, nil ,{autocomplete: "off", class: 'form-control'}
+      .row
+        .col-md-10.form-group
+          = submit_tag "Sign in", class: 'btn btn-success'

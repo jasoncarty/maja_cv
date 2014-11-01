@@ -1,0 +1,81 @@
+| <!doctype>
+html
+  head
+    title
+      | Cv
+    = stylesheet_link_tag    "public", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag    "responsive", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  body
+    .nav.navbar.navbar-inverse[role="navigation"]
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"]
+            span.sr-only
+              | Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand[href="/admin"]
+            | Majas CV
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.navbar-nav.nav
+          - if !current_user
+            p.navbar-link.navbar-text.navbar-right
+              = link_to "Sign in", new_user_session_path
+          
+          - if current_user
+            p.navbar-right.navbar-text.navbar-right
+              = "Logged in as #{current_user.name}"
+            p.navbar-right.navbar-text.navbar-link
+              = link_to "Sign out", destroy_user_session_path, method: :delete
+
+    .header
+      .container
+        .row
+          .col-md-4.col-sm-6
+            .row
+              .col-md-6.col-md-offset-3.left-top
+                span.dark-grey maja
+                span.light-grey almgren
+                span.white carty
+            .row
+              .col-md-12.left-bottom
+                h1 
+                  span.dark-grey grafisk
+                  span.light-grey formgivare
+
+          .col-md-6.col-md-offset-2.col-sm-6
+            .balls-wrapper
+              ul.balls
+                li.dark-grey
+                  a[href='/'] Hem
+                li.light-grey
+                  a[href='/pages/cv'] CV
+                li.lighter-grey
+                  a[href='/pages/portfolio'] Portfolio
+
+
+    .main
+      .container
+        .row
+          .col-md-3.col-sm-3.left-sidebar
+
+          .col-md-9.col-sm-9.right-sidebar
+            = yield
+
+    .footer
+      .container
+        .row
+          .col-md-2.col-sm-4.xs-margin
+            .row
+              .col-sm-3.xs-margin
+              .col-sm-9
+                | 0707 42 23 41
+          .col-md-2.col-sm-4.xs-margin
+            .row
+              .col-sm-3.xs-margin
+              .col-sm-9
+                a[herf="mailto:maja.almgren@sodra.com"]
+                  | maja.almgren@sodra.com

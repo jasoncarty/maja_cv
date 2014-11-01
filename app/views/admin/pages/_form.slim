@@ -1,0 +1,35 @@
+
+  = form_for [:admin, @page] do |f|
+    .well
+      .row
+        .col-md-12
+          .row.form-group
+            .col-md-4
+              = f.label :title
+            .col-md-8  
+              = f.text_field :title, class: 'form-control'
+          .row.form-group
+            .col-md-4
+              = f.label :url
+            .col-md-8  
+              = f.text_field :url, class: 'form-control'
+          .row.form-group
+            .col-md-4
+              = f.label :meta_title
+            .col-md-8
+              = f.text_field :meta_title, class: 'form-control'
+          .row.form-group
+            .col-md-4
+              = f.label :meta_description
+            .col-md-8
+              = f.text_field :meta_description, class: 'form-control'
+          .row.form-group
+            .col-md-12
+              = f.label :content
+          .row.form-group
+            .col-md-12
+              = f.cktext_area :content
+    .well.form-actions
+      = link_to 'Back to Pages', admin_pages_path, class: 'btn btn-info col-md-4' 
+      = f.submit 'Save', class: 'btn btn-success col-md-4 col-md-offset-4'          
+
