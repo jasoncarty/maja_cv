@@ -162,6 +162,7 @@ DEPENDENCIES
   mina-puma
   paperclip
   pg
+  puma
   rails (= 4.1.0.beta1)
   rmagick (= 2.13.2)!
   sass-rails (~> 4.0.0.rc1)
