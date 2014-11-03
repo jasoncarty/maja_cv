@@ -2,12 +2,12 @@
 html
   head
     title
-      | Login
+      = @page.title
     = stylesheet_link_tag    "public", media: "all", "data-turbolinks-track" => true
     = stylesheet_link_tag    "responsive", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
-    | <meta name="descrition" content="Login to Maja Almgren Cartys CV app" />
+    | <meta name="description" content="#{@page.meta_description}" />
 
   body
     .nav.navbar.navbar-inverse[role="navigation"]
@@ -57,29 +57,5 @@ html
                   a[href='/pages/cv'] CV
                 li.lighter-grey
                   a[href='/pages/portfolio'] Portfolio
-    .main
-      .container
-        .row
-          .col-md-3.col-sm-3.left-sidebar
 
-          .col-md-9.col-sm-9.right-sidebar  
-            -if flash
-              .alert.alert-danger
-                =flash[:alert] 
-            = yield
-    .footer
-      .container
-        .row
-          .col-md-2.col-sm-4.xs-margin
-            .row
-              .col-sm-3.xs-margin
-              .col-sm-9
-                | 0707 42 23 41
-          .col-md-2.col-sm-4.xs-margin
-            .row
-              .col-sm-3.xs-margin
-              .col-sm-9
-                a[herf="mailto:maja.almgren@sodra.com"]
-                  | maja.almgren@sodra.com
 
-        

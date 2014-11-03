@@ -1,10 +1,12 @@
 class Public::PagesController < ApplicationController
-  
+  layout false
+    
   def home
     @page = Page.find_by_title('Home')
   end
 
   def show
+
     @page = Page.find_by_url(params[:id])  
     if !@page
       render :error_404, :status => 400
