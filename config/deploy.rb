@@ -14,7 +14,7 @@ set :repository, 'https://github.com/jasoncarty/maja_cv.git'
 set :branch, 'master'
 set :user, 'jasoncarty'
 
-set :deploy_to, '/var/www/maja_cv'
+set :deploy_to, '/var/www/maja-cv'
 set :domain,    '188.226.149.121'
 set :rails_env, 'production'
 
