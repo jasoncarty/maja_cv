@@ -1,5 +1,5 @@
 class Public::PagesController < ApplicationController
-  before_filter :set_layout, only: :show
+  #before_filter :set_layout, only: :show
   layout false, only: :home
 
   def home
