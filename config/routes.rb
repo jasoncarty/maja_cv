@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  
+
+  resources :templates
+
   mount Ckeditor::Engine => '/ckeditor'
   scope module: 'public' do
     

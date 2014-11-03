@@ -24,6 +24,12 @@
             .col-md-8
               = f.text_field :meta_description, class: 'form-control'
           .row.form-group
+            =f.fields_for :template_attributes do |build|
+              .col-md-4
+                = build.label :template
+              .col-md-8
+                = build.select :id, options_from_collection_for_select(Page.templates, :id, :name),{}, class: 'form-control'
+          .row.form-group
             .col-md-12
               = f.label :content
           .row.form-group

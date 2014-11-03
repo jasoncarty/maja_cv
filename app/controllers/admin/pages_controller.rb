@@ -9,6 +9,7 @@ class Admin::PagesController < ApplicationController
 
   def new
     @page = Page.new
+    #@page.build_template
   end  
 
   def create
@@ -23,6 +24,7 @@ class Admin::PagesController < ApplicationController
 
   def edit
     @page = Page.find(params[:id])
+    #@page.build_template
   end
 
   def show
@@ -49,7 +51,7 @@ class Admin::PagesController < ApplicationController
   private
 
   def page_params
-    params.require(:page).permit(:title, :meta_title, :meta_description, :content, :bootsy_image_gallery_id, :url)
+    params.require(:page).permit(:title, :meta_title, :meta_description, :content, :bootsy_image_gallery_id, :url, template_attributes:[:id])
   end
 
 
