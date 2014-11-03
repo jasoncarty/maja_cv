@@ -2,12 +2,14 @@
 html
   head
     title
-      = @page.title
+      -if @page
+        = @page.title
     = stylesheet_link_tag    "public", media: "all", "data-turbolinks-track" => true
     = stylesheet_link_tag    "responsive", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
-    | <meta name="description" content="#{@page.meta_description}" />
+    -if @page
+      | <meta name="description" content="#{@page.meta_description}" />
 
   body
     .nav.navbar.navbar-inverse[role="navigation"]
