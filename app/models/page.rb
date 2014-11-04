@@ -1,8 +1,6 @@
 class Page < ActiveRecord::Base
-  has_one :template
-  accepts_nested_attributes_for :template
+  
+  :templates %w( 'full_width' '2_col' )
 
-  def self.templates
-    Template.all
-  end
+  
 end

@@ -6,6 +6,7 @@ class CreatePages < ActiveRecord::Migration
       t.string :meta_description
       t.text :content
       t.string :url
+      t.string :template, default: nil
 
       t.timestamps
     end
