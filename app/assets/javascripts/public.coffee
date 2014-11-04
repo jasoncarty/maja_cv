@@ -10,3 +10,7 @@ $(document).ready ->
   $('ul.balls li').click ->
     window.location = $(this).children('a').attr('href')
 
+  
+  $('.portfolio img').each ->
+    $(this).wrap('<a class="fancybox" href="' + $(this).attr('src') + '"></a>')
+
