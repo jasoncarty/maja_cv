@@ -6,3 +6,7 @@ window.addEventListener 'keydown', (e) ->
     else
       $('.navbar-inverse').slideToggle('fast')
 
+$(document).ready ->
+  $('ul.balls li').click ->
+    window.location = $(this).children('a').attr('href')
+
