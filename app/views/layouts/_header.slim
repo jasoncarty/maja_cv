@@ -4,12 +4,16 @@ html
     title
       -if @page
         = @page.title
+      -else
+        | Maja Almgrens CV
     = stylesheet_link_tag    "public", media: "all", "data-turbolinks-track" => true
     = stylesheet_link_tag    "responsive", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
     -if @page
       | <meta name="description" content="#{@page.meta_description}" />
+
+    /![if lt IE 9]><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]
 
   body
     .nav.navbar.navbar-inverse[role="navigation"]
