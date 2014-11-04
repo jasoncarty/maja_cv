@@ -51,7 +51,7 @@ class Admin::PagesController < ApplicationController
   private
 
   def page_params
-    params.require(:page).permit(:title, :meta_title, :meta_description, :content, :bootsy_image_gallery_id, :url)
+    params.require(:page).permit(:title, :meta_title, :meta_description, :content, :bootsy_image_gallery_id, :url, template_attributes: [:id, :name])
   end
 
 

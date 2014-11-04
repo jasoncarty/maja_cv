@@ -6,7 +6,6 @@ class CreateTemplates < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :templates, :page_id
   end
 
 end
