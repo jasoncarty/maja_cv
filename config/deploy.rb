@@ -23,7 +23,7 @@ set :rails_env, 'production'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
-set :shared_paths, %w(log tmp/pids tmp/sockets config/database.yml config/secrets.yml)
+set :shared_paths, %w(log tmp/pids tmp/sockets config/database.yml config/secrets.yml public/ckeditor_assets)
 set :keep_releases, 2
 
 # Optional settings:
@@ -74,7 +74,7 @@ task :deploy => :environment do
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     invoke :'bundle:install'
-    invoke :'rails:db_migrate'
+    invoke :'rails:db_migrate:force'
     invoke :'rails:assets_precompile'
     invoke :'deploy:cleanup'
 
