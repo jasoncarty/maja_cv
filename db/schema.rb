@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20141103212015) do
     t.string   "meta_description"
     t.text     "content"
     t.string   "url"
+    t.string   "template"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
