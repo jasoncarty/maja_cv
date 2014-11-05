@@ -27,7 +27,7 @@
             .col-md-4
               = f.label :template
             .col-md-8
-              = f.select :template, options_for_select(Page.templates),{}, class: 'form-control'
+              = f.select :template, options_for_select(Page::Templates, @page.template),{}, class: 'form-control'
           .row.form-group
             .col-md-12
               = f.label :content

@@ -1,6 +1,5 @@
 class Page < ActiveRecord::Base
 
-  def self.templates
-    %w( full_width 2_col )
-  end
+  Templates = %w( full_width 2_col )
+
 end
