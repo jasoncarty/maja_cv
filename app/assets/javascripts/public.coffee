@@ -10,3 +10,11 @@ $(document).ready ->
   $('ul.balls li').click ->
     window.location = $(this).children('a').attr('href')
 
+  
+  $('.portfolio img').each ->
+    $(this).wrap('<a class="color-box" href="' + $(this).attr('src') + '" rel="group" data-colorbox_static="true" colorbox-photo="true" colorbox-iframe="false"></a>')
+
+  $('.color-box').colorbox(
+    rel: 'group'
+    transition: 'elastic'
+    )

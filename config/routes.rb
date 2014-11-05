@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  # Custom 404/400/500 pages
+  match "/404" => "errors#error404", via: [ :get, :post, :patch, :delete ]
+  match "/400" => "errors#error400", via: [ :get, :post, :patch, :delete ]
+  match "/500" => "errors#error500", via: [ :get, :post, :patch, :delete ]
+
   mount Ckeditor::Engine => '/ckeditor'
   scope module: 'public' do
     

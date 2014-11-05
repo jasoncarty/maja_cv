@@ -1,6 +1,6 @@
 class Page < ActiveRecord::Base
-  
-  :templates %w( 'full_width' '2_col' )
 
-  
+  def self.templates
+    %w( full_width 2_col )
+  end
 end

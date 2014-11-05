@@ -17,6 +17,7 @@ gem 'ckeditor'
 gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'puma'
+gem 'colorbox-rails'
 
 group :development do
   gem 'mina'
