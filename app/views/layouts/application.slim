@@ -54,11 +54,11 @@ html
           .col-md-6.col-md-offset-2.col-sm-6
             .balls-wrapper
               ul.balls
-                li.dark-grey
+                li class=( @page.title == 'Home' ? 'active' : '' if @page)
                   a[href='/'] Hem
-                li.light-grey
+                li class=( @page.title == 'CV' ? 'active' : '' if @page)
                   a[href='/pages/cv'] CV
-                li.lighter-grey
+                li class=( @page.title == 'Portfolio' ? 'active' : '' if @page)
                   a[href='/pages/portfolio'] Portfolio
     .main
       .container
