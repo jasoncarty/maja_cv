@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap.min
 //= require ckeditor/init
+//= require colorbox-rails
 //= require_tree .

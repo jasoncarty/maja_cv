@@ -13,5 +13,6 @@
  *= require_tree .
  *= require bootstrap
  *= require public
+ *= require colorbox
  *= require_self
  */

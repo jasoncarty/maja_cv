@@ -12,5 +12,9 @@ $(document).ready ->
 
   
   $('.portfolio img').each ->
-    $(this).wrap('<a class="fancybox" href="' + $(this).attr('src') + '"></a>')
+    $(this).wrap('<a class="color-box" href="' + $(this).attr('src') + '" rel="group" data-colorbox_static="true" colorbox-photo="true" colorbox-iframe="false"></a>')
 
+  $('.color-box').colorbox(
+    rel: 'group'
+    transition: 'elastic'
+    )
