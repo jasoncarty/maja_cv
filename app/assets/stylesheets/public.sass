@@ -34,7 +34,7 @@ img
   color: $dark-grey
 
 .white
-  color: $white
+  color: #F0F0F0 
 
 .light-grey
   color: $light-grey
@@ -147,11 +147,17 @@ img
     top: -50px
     left: -30px
     transform: rotate(-18deg)
-    max-width: 162px
+    width: 162px
+    height: 59px
+    background: $pink
+    padding: 20px
+    text-align: center
     h4
-      background: rgb(0, 174, 239)
+      margin: 0
       color: #fff
-      padding: 20px
+  .puff-label.utbildning
+    padding: 12px
+      
 
 .left
   padding-right: 35px
@@ -161,8 +167,8 @@ img
 
 .bubble
   padding: 30px
-  border-top: 4px solid rgb(0, 174, 239)
-  border-bottom: 4px solid rgb(0, 174, 239)
+  border-top: 4px solid $pink
+  border-bottom: 4px solid $pink
   margin-bottom: 120px
   position: relative
 
@@ -174,11 +180,11 @@ img
   bottom: -41px
 
 .arrow-normal
-  background: asset-url('blue-triangle.png') no-repeat
+  background: asset-url('pink-triangle.png') no-repeat
   left: 60%
 
 .arrow-backwards
-  background: asset-url('blue-triangle-backwards.png') no-repeat
+  background: asset-url('pink-triangle-backwards.png') no-repeat
   left: 40%
 
 .cv-table 
