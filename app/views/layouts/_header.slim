@@ -61,8 +61,10 @@ html
               ul.balls
                 li class=( @page.title == 'Home' ? 'active' : '' if @page)
                   a[href='/'] Hem
+                li.divider |
                 li class=( @page.title == 'CV' ? 'active' : '' if @page)
-                  a[href='/pages/cv'] CV
+                  a[href='/pages/cv'] CURRICULUM VITAE
+                li.divider |
                 li class=( @page.title == 'Portfolio' ? 'active' : '' if @page)
                   a[href='/pages/portfolio'] Portfolio
 

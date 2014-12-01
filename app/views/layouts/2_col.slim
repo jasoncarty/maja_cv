@@ -2,9 +2,9 @@
 .main
   .container
     .row
-      .col-md-3.col-sm-3.left-sidebar
-        =image_tag 'maja.png'
-      .col-md-9.col-sm-9.right-sidebar
+      .col-md-8.col-sm-8.right-sidebar
         = yield
+      .col-md-4.col-sm-4.left-sidebar
+        =image_tag 'maja.png'
 
 = render 'layouts/footer'
