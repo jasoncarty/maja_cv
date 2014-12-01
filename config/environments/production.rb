@@ -60,7 +60,7 @@ Rails.application.configure do
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 
-  config.assets.precompile += %w( *.png *.gif *.jpg public.css responsive.css admin.css public.js )
+  config.assets.precompile += %w( *.png *.gif *.jpg public.css responsive.css admin.css public.js ckeditor/*)
 
 
   # Ignore bad email addresses and do not raise email delivery errors.
