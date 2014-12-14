@@ -18,3 +18,6 @@ $(document).ready ->
     rel: 'group'
     transition: 'elastic'
     )
+
+  $('.nav-toggle').on 'click', ->
+    $('ul.balls').slideToggle(300)

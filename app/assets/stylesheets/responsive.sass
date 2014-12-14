@@ -5,18 +5,54 @@ $light-grey: #808080
 $lighter-grey: #D0D0D0
 $white: #fff
 $pink: #CC0066
+$red: #D8334D
 
+@media (min-width: 581px)
+  .nav-toggle
+    display: none
 
 @media (min-width: 1200px)
   .container
     width: 970px
+@media (max-width: 991px)
+
+  .header
+    .balls-wrapper
+    ul.balls
+      left: -150px
+
+  .container.cv
+    .col-sm-1
+      display: none
+    .col-sm-10
+      width: 100%
+
+  .cv 
+    .bubble-row
+      .col-sm-3
+        .green-bubble
+          height: 179px
+    .block
+      height: auto
+      
+    .bubble
+      padding-top: 50px
+      .col-sm-3
+        width: 20%
+        float: left
+      .col-sm-9
+        width: 80%
+        float: left
+
+
 
 @media (max-width: 767px)
   
   .header
     .balls-wrapper
     ul.balls
-      position: relative
+      left: 100px
+      top: 20px
 
   .main
     .left-sidebar
@@ -37,6 +73,121 @@ $pink: #CC0066
   .right
     padding-right: 35px
 
+  .cv 
+    .bubble-row
+      .col-sm-3
+        width: 50%
+        float: left
+        &:first-child, &:nth-child(2)
+          margin-bottom: 30px
+        .green-bubble
+          height: 129px
+    .block
+      margin-bottom: 50px
+
+  .footer
+    .container
+      >.row
+        >.col-sm-3, >.col-sm-4
+          width: 30%
+          float: left
+
+
+@media (max-width: 580px)
+  
+  .main
+    padding-top: 40px
+
+  .header
+    position: relative
+  .nav-toggle
+    display: block
+    position: fixed
+    top: 15px
+    right: 15px
+    width: 50px
+    height: 40px
+    background: $red
+    padding: 8px
+    z-index: 3
+    cursor: pointer
+    border-radius: 2px
+    .icon-bar
+      width: 100%
+      height: 4px
+      background: rgba(255, 255, 255, 0.4)
+      display: block
+      margin-bottom: 6px
+      //box-shadow: 2px 2px 5px #FF99FF
+      &:last-child
+        margin-bottom: 0
+
+  .header
+    .balls-wrapper
+      
+    ul.balls
+      position: fixed
+      display: none
+      top: 0
+      left: 0
+      width: 100%
+      transform: none
+      li.divider
+        display: none
+      li
+        width: 100%
+        display: block
+        a
+          display: block
+          width: 100%
+
+@media (max-width: 520px) and (orientation: portrait)
+  
+  .cv 
+    .bubble
+      padding-top: 20px
+      padding-bottom: 10px
+    .big-quote
+      font-size: 180px
+      line-height: 150px
+
+@media (max-width: 500px)
+  
+  .cv 
+    .bubble-row
+      .col-sm-3
+        width: 50%
+        float: left
+        &:first-child, &:nth-child(2)
+          margin-bottom: 30px
+        .green-bubble
+          height: 159px
+
+
+@media (max-width: 430px) and (orientation: portrait)
+  
+  .cv 
+    .bubble
+      padding-bottom: 40px
+    .big-quote
+      font-size: 140px
+      line-height: 130px
+
+
+@media (max-width: 420px)
+  
+  .cv 
+    .bubble-row
+      .col-sm-3
+        width: 100%
+        float: left
+        margin-bottom: 30px
+        &:first-child, &:nth-child(2)
+          margin-bottom: 30px
+        .green-bubble
+          height: auto
+
+
 @media (max-width: 400px)
   
   .header
@@ -48,14 +199,25 @@ $pink: #CC0066
   .cv-table
     td
       font-size: 12px
+
+@media (max-width: 360px) and (orientation: portrait)
+  
+  .cv 
+    .bubble
+      padding-bottom: 50px
+    .big-quote
+      font-size: 100px
+      line-height: 90px
+
+
 @media (max-width: 320px) and (orientation: portrait)
   
   .header
     ul.balls 
       li
-        height: 85px
-        width: 85px
-        padding: 32px 0
+        // height: 85px
+        // width: 85px
+        // padding: 32px 0
 
   .bubble, .puff
     padding: 30px
