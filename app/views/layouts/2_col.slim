@@ -2,9 +2,17 @@
 .main
   .container
     .row
-      .col-md-8.col-sm-8.right-sidebar
-        = yield
       .col-md-4.col-sm-4.left-sidebar
         =image_tag 'maja.png'
+        .bubble
+          .row
+            .col-sm-3
+              p.big-quote
+                |  ” 
+            .col-sm-9
+              |  Som person är jag positiv, nyfiken, initiativ- rik och noggrann. Jag trivs lika bra med att jobba självständigt som tillsammans med andra. I snart 3 år har jag arbetat som grafisk formgivare pä Södra Skogsägarnas inhouse-avdelning. Jag är van vid högt tempo och att ha många projekt på gång samtidigt. 
 
+      .col-md-8.col-sm-8.right-sidebar
+        = yield
+      
 = render 'layouts/footer'

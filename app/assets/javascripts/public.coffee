@@ -21,3 +21,14 @@ $(document).ready ->
 
   $('.nav-toggle').on 'click', ->
     $('ul.balls').slideToggle(300)
+
+
+  getHeightOfBody
+
+$(window).resize ->
+  getHeightOfBody
+
+
+getHeightOfBody = ->
+  height = $('body').outerHeight() - 161
+  $('.balls-wrapper').outerHeight(height)

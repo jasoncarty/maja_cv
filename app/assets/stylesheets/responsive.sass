@@ -6,6 +6,7 @@ $lighter-grey: #D0D0D0
 $white: #fff
 $pink: #CC0066
 $red: #D8334D
+$green: #74BC9F
 
 @media (min-width: 581px)
   .nav-toggle
@@ -15,8 +16,10 @@ $red: #D8334D
       display: block !important
 
 @media (min-width: 1200px)
+  
   .container
-    width: 970px
+    width: 1120px
+
 @media (max-width: 991px)
 
   .header
@@ -55,7 +58,7 @@ $red: #D8334D
     .balls-wrapper
     ul.balls
       left: 100px
-      top: 20px
+      top: 32px
 
   .main
     .left-sidebar
@@ -103,6 +106,7 @@ $red: #D8334D
 
   .header
     position: relative
+    border-bottom: 15px solid $green
   .nav-toggle
     display: block
     position: fixed
@@ -127,19 +131,23 @@ $red: #D8334D
 
   .header
     .balls-wrapper
-      
+      background: $red
+      height: auto
     ul.balls
       position: fixed
       display: none
+      height: auto
       top: 0
       left: 0
       width: 100%
       transform: none
+      background: $red
       li.divider
         display: none
       li
         width: 100%
         display: block
+        background: $red
         a
           display: block
           width: 100%
